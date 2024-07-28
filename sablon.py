@@ -28,6 +28,7 @@ yas[:,1:4] = imputer.transform(yas[:,1:4])
 
 ulke = df.iloc[:,0:1].values
 
+le = preprocessing.LabelEncoder()
 
 ulke[:,0] = le.fit_transform(df.iloc[:,0])
 
