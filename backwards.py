@@ -67,14 +67,21 @@ lr.fit(x_train, y_train)
 tahmin = lr.predict(x_test)
 tahmin = pd.DataFrame(data=tahmin,index = range(8),columns =["Boy"])
 
+#4.GERİ ELEME
+#4.1 ilk adım
+X = np.append(arr = np.ones((22,1)).astype(int),values = conX, axis = 1)
 
+liste = conX.iloc[:,[0,1,2,3,4,5]].values
+liste = np.array(liste,dtype=float)
 
+model = sm.OLS(boyY,liste).fit()
+print(model.summary())
 
+#4.2 ikinci adım
+liste = conX.iloc[:,[0,1,2,3,5]].values
+liste = np.array(liste,dtype=float)
 
-
-
-
-
-
+model = sm.OLS(boyY,liste).fit()
+print(model.summary())
 
 
