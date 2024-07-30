@@ -58,6 +58,6 @@ x_train,x_test,y_train,y_test = train_test_split(s, cinsiyetSonuc, test_size= 0.
 
 sc = StandardScaler()
 X_train = sc.fit_transform(x_train)
-X_test = sc.fit_transform(x_train)
+X_test = sc.fit_transform(x_test)
 
 
