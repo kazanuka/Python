@@ -57,7 +57,6 @@ tahmin = lr.predict(x_test)
 tahmin = pd.DataFrame(data=tahmin,index = range(5),columns =["Played?"])
 
 #4.GERİ ELEME
-#4.1 ilk adım
 X = np.append(arr = np.ones((14,1)).astype(int),values = s, axis = 1)
 
 liste = s2.iloc[:,[0,1,2]].values
